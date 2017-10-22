@@ -90,7 +90,7 @@ electronics.push(flatscreenTV)
 electronics.push(homePC)
 
 // populate inventory database with inventory type arrays
-let HomeInventory = {
+let homeInventory = {
     "furniture": furniture,
     "collection": collection,
     "electronics": electronics,
@@ -99,13 +99,10 @@ let HomeInventory = {
     "tools": tools
   }
   
-  // convert inventory database into string saved in browser memory
-  const homeInventoryString = JSON.stringify(HomeInventory)
-  localStorage.setItem("homeInventory", homeInventoryString)
+// test - print database in console
+console.log("Initial inventory is ",homeInventory)
 
-  // convert stored string Back into database and read it
-  // const storedInventory = localStorage.getItem("homeInventory")
-  // let HomeInventory = JSON.parse(storedInventory)
-
-
-  
+// convert inventory database into string saved in browser memory
+const homeInventoryString = JSON.stringify(homeInventory)
+localStorage.setItem("homeInventory", homeInventoryString)
+ 
